@@ -1,0 +1,29 @@
+* {
+    color: red;
+}
+
+body {
+    background-size: cover;
+}
+
+#greetingHeading {
+    margin-top: 0in;
+    font-size: 1in;
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+#currentTime {
+    margin-top: 1.7in;
+    margin-bottom: 0in;
+    font-size: 2.2in;
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+#roasts {
+
+    font-size: 0.3in;
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
