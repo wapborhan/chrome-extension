@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.actionPanel {
+  width: 450px;
+  padding: 0;
+}
+
+.actionPanel .header {
+  background: #4608ad;
+  color: #fff;
+  font-size: 22px;
+  padding: 20px 20px;
+  font-weight: 700;
+}
+
+
+
+.actionPanel .body .backgrdChange {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-bottom: 2px solid #888;
+}
+
+.actionPanel .body .backgrdChange h1 {
+  font-size: 15px;
+}
+
+/*  */
+.styled-button {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+  margin: 2em auto auto;
+  width: 300px;
+  padding: 1em;
+  padding: 1em;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #404040;
+}
+
+.styled-button:active {
+  border: 1px solid white;
+}
+
+p {
+  margin: 0;
+}
+
+.preload-images {
+  background-image: url("https://picsum.photos/id/1073/960/540"),
+    url("https://picsum.photos/id/1080/960/540"),
+    url("https://picsum.photos/id/1053/960/540");
+}
+
+.background-image-books {
+  background-color: #d2c2b5;
+  background-image: url("https://picsum.photos/id/1073/960/540");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.background-image-strawberries {
+  background-color: #d62752;
+  background-image: url("https://picsum.photos/id/1080/960/540");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.background-image-sea {
+  background-color: #56826b;
+  background-image: url("https://picsum.photos/id/1053/960/540");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
