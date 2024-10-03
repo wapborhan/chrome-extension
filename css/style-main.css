@@ -1581,3 +1581,33 @@
    text-align: center;
    padding: 20px 0;
  }
+
+
+
+ /*  */
+
+
+ body {
+   background-image: url('https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg');
+   background-size: cover;
+   height: 90vh;
+   transition: background-image 0.5s ease;
+ }
+
+ button.change-bg-button {
+   position: absolute;
+   top: 10%;
+   left: 50%;
+   transform: translateX(-50%);
+   padding: 10px 20px;
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   border-radius: 5px;
+ }
+
+ button.change-bg-button:hover {
+   background-color: #0056b3;
+ }

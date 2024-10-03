@@ -301,27 +301,61 @@ async function timerFun(minute) {
 //Count Time End
 
 //Footer Credits Work
-// $(document).ready(function () {
-//   if ($("#footer-post").length == 1) {
-//     // check if <a> exists in id="footer-post" and changes <a> address and class
-//     $("#footer-post a")
-//       .prop("href", "http://wapborhan.com/")
-//       .prop("class", "footer-3")
-//       .text("Borhan Uddin");
-//   }
+$(document).ready(function () {
+  if ($("#footer-post").length == 1) {
+    // check if <a> exists in id="footer-post" and changes <a> address and class
+    $("#footer-post a")
+      .prop("href", "http://wapborhan.com/")
+      .prop("class", "footer-3")
+      .text("Borhan Uddin");
+  }
 
-//   if ($("#footer-post").length >= 1 && $("a.footer-3").length == 0) {
-//     // if link is erased it creates a new one in the same div
-//     $("<a>", {
-//       class: "footer-3",
-//       text: "Borhan Uddin",
-//       href: "http://wapborhan.com/",
-//     }).appendTo("#footer-post");
-//   }
+  if ($("#footer-post").length >= 1 && $("a.footer-3").length == 0) {
+    // if link is erased it creates a new one in the same div
+    $("<a>", {
+      class: "footer-3",
+      text: "Borhan Uddin",
+      href: "http://wapborhan.com/",
+    }).appendTo("#footer-post");
+  }
 
-//   if ($("#footer-post").length == 0 && $("a.footer-3").length == 0) {
-//     // if div and link are erased it shows an alert and load yahoo
-//     alert("Link has been erased");
-//     window.location.href = "http://wapborhan.com/";
-//   }
-// });
+  if ($("#footer-post").length == 0 && $("a.footer-3").length == 0) {
+    // if div and link are erased it shows an alert and load yahoo
+    alert("Link has been erased");
+    window.location.href = "http://wapborhan.com/";
+  }
+});
+
+const images = [
+  "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg",
+  "https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-sunset-surrounded-by-grass_181624-22807.jpg?t=st=1727973257~exp=1727976857~hmac=01e29d8651fe7c50d9e6e33c535406c12c9e03159b5c4f248c73d30b941570dc&w=996",
+  "https://img.freepik.com/free-photo/beautiful-rainbow-nature_23-2151498366.jpg?t=st=1727974046~exp=1727977646~hmac=1b1b7e132c75f0ad8bca329da2b96a11cdb2122edcd83dc9b59a2f81f363cf8c&w=996",
+  "https://img.freepik.com/free-photo/beautiful-natural-landscape_23-2151839222.jpg?t=st=1727974644~exp=1727978244~hmac=70614e4a92b153574964bc38ada5a1252be925697c22678fc7b722e2d8a93fac&w=1060",
+  "https://img.freepik.com/free-photo/photorealistic-tree-with-branches-trunk-outside-nature_23-2151478131.jpg?t=st=1727974650~exp=1727978250~hmac=7235644e15ea05661ee7eb031c5331aa3dcbdb604140534753ae9423bf661dfa&w=1060",
+  "https://img.freepik.com/free-photo/beautiful-rainbow-nature_23-2151498319.jpg?t=st=1727974659~exp=1727978259~hmac=4e238bfef94f2982c0d719230cbb8544d7cf8c60e89d1bc5ae1a5190f208f674&w=1060",
+  "https://img.freepik.com/free-photo/african-savannah-scene-black-white_23-2151774050.jpg?t=st=1727974662~exp=1727978262~hmac=7ffb7afe9449c406d1f7a1470f760a2c9f25b0d44540c55a056978eb1ca79732&w=1060",
+];
+
+let currentIndex = 0;
+
+document
+  .getElementById("changeBackgroundButton")
+  .addEventListener("click", function () {
+    currentIndex = (currentIndex + 1) % images.length;
+    let newBackground = images[currentIndex];
+
+    // Set the background
+    document.body.style.backgroundImage = `url(${newBackground})`;
+
+    // Save the current background in chrome.storage.local
+    chrome.storage.local.set({ backgroundImage: newBackground }, function () {
+      console.log("Background image saved.");
+    });
+  });
+
+// Check if a background is saved and set it when the page loads
+chrome.storage.local.get("backgroundImage", function (result) {
+  if (result.backgroundImage) {
+    document.body.style.backgroundImage = `url(${result.backgroundImage})`;
+  }
+});
