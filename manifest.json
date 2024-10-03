@@ -3,11 +3,15 @@
   "version": "1.0",
   "description": "roast you",
   "manifest_version": 3,
-  "chrome_url_overrides": {
-    "newtab": "homepage.html"
+  "permissions": ["storage", "tabs", "contextMenus", "notifications"],
+  "background": {
+    "service_worker": "background.js"
   },
   "action": {
     "default_popup": "action.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "homepage.html"
   },
   "icons": {
     "16": "icon/icon-16.png",
