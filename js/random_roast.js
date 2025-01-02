@@ -16,13 +16,6 @@ roast.innerHTML = roasts[Math.floor(Math.random() * roasts.length)];
 
 function updateTime() {
   var today = new Date();
-  if (today.getMinutes() < 10) {
-    var time = today.getHours() + ":0" + today.getMinutes();
-  } else if (today.getMinutes() >= 10) {
-    var time = today.getHours() + ":" + today.getMinutes();
-  }
-  //   var t = document.getElementById("currentTime");
-  //   t.innerHTML = time;
 
   const greet1 = "Good morning,Borhan Uddin.";
   const greet2 = "Good afternoon, Borhan Uddin.";

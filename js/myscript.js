@@ -172,6 +172,7 @@ function render() {
 
 saveTAB.addEventListener("click", function () {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    tagVAL.value = tabs[0].title;
     siteVAL.value = tabs[0].url;
     popup.style.transform = "translateY(0)";
   });
@@ -233,3 +234,5 @@ const show_toast = (msg) => {
     toast.style.transform = "translateY(+60px)";
   }, 1500);
 };
+
+// Path: js/background.js
